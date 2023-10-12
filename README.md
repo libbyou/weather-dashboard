@@ -33,9 +33,9 @@ In the search field, enter the city you wish to see the weather for. After hitti
 
 ## Technologies
 
---Bootstrap
---jQuery
--- Openweather API
+- Bootstrap
+- jQuery
+- Openweather API
 
 ## License
 
