@@ -79,7 +79,7 @@ function weatherAPI() {
         })
         .then(function (data) {
           console.log(data)
-          // console.log("MAIN PARENT CONTAINER", weatherDisplay)
+          console.log("MAIN PARENT CONTAINER", weatherDisplay)
           weatherDisplay.empty()
           for (var i = 0; i < data.list.length; i+=8) {
             var day=data.list[i];
@@ -92,14 +92,14 @@ function weatherAPI() {
 }
 
 function displayWeather (day) {
-
+  
   var date = day.dt_txt;
   var temp = day.main.temp;
   var windSpeed = day.wind.speed;
   var humidity = day.main.humidity;
   var iconDescription = day.weather[0].icon;
   var iconUrL = `https://openweathermap.org/img/wn/${iconDescription}.png`
-  var weatherContainer =$("<div>").addClass('weatherContainer').css({"border": "solid black 10px", "margin": "10px"});
+  var weatherContainer =$("<div>").addClass('weatherContainer').css({"border": "solid black 2px", "margin": "10px"});
   
   var iconEl=$('<img>').attr('src', iconUrL);
   var dateEl=$('<p>').text(date);
