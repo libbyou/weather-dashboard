@@ -48,7 +48,7 @@ function printCityData() {
     var city = cities[i];
 
     // Create row and columns for project
-    var cityBtnEl = $('<button>').text(city);
+    var cityBtnEl = $('<button>').text(city).css({"width": "100%", "margin-top": "5px", "margin-bottom": "5px", "border-radius": "5px", "font-size": "20px", "height": "40px"});
     // append elements to DOM to display them
     cityList.append(cityBtnEl);
 
@@ -99,7 +99,7 @@ function displayWeather (day) {
   var humidity = day.main.humidity;
   var iconDescription = day.weather[0].icon;
   var iconUrL = `https://openweathermap.org/img/wn/${iconDescription}.png`
-  var weatherContainer =$("<div>").addClass('weatherContainer').css({"border": "solid black 10px", "background-color": "red"});
+  var weatherContainer =$("<div>").addClass('weatherContainer').css({"border": "solid black 10px", "margin": "10px"});
   
   var iconEl=$('<img>').attr('src', iconUrL);
   var dateEl=$('<p>').text(date);
